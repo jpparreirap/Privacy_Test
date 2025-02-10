@@ -21,6 +21,19 @@ Frontend: ASP.NET e Vue.js (Web Components)<br>
 Banco de Dados: MongoDB<br>
 Mensageria: RabbitMQ
 
+## Regras de negócio implementadas
+<ul>
+ <li>Desconto calculado de acordo com o meio de pagamento, caso for avista cliente recebe 10%, caso o meio de pagamento seja cartão de crédito e parcelado com parcelas > 1
+a taxa de juros é calculada com base no total do pedido, a uma taxa fixa de 2% ao mês.</li>
+ <li>Se o cliente for assinate, receberá um desconto adicional, o calculo do desconto será com base na quantidade de meses ativos da assinatura. tempo >= 3 meses 2% a mais,
+  >= 6 meses 5% a mais e >= 12 meses 10% a mais de desconto. Este desconto é acumulativo ao desconto anterior em caso de pagamento Avista.</li>
+ <li>O calculo do frete será calculado com base na distancia em Km para a entrega ser feita, e será calculado com base no valor total do pedido após os descontos aplicados,
+  uma taxa fixa de 10 reais e a 2,5 reais por Km de distância</li>
+ <li>Deverá dar baixa do estoque os produtos que foram vendidos no pedido processado com sucesso</li>
+ <li>Deverá ser implementado um sistema para acompanhamento do processamento dos pedidos feitos e do estoque disponível, simulando um centro de distribuição</li>
+</ul>
+
+
 ## Breve detalhes de execução
 <ul>
   <li>É necessário configurar o appsettings.Development.json (aplicação .net) e o .env(aplicação node)</li>
