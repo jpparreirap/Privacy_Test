@@ -1,16 +1,31 @@
 # Backend .NET
 
-## Project setup
+## Configuração do projeto
 ```
 dotnet restore
 ```
 
-### Compiles
+## Configurar o appsettings.Development.json
+```
+  "MongoDB": {
+    "ConnectionString": "SUA_CONNECTIONSTRING",
+    "Database": "ecommerceprivacy"
+  },
+
+  "RabbitMQ": {
+    "Servidor": "SEU_HOST",
+    "Usuario": "SEU_USER",
+    "Senha": "SUA_PASSWORD",
+    "VirtualHost": "SEU_VHOST"
+  },
+```
+
+### Compilar o projeto
 ```
 dotnet build
 ```
 
-### Lints and fixes files
+### Rodar o projeto
 ```
 dotnet run
 ```
