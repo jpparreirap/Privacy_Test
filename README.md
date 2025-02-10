@@ -1,6 +1,26 @@
 # Privacy_Test
 Diretório destinado ao teste da privacy
 
+## Etapas do desafio
+### Etapa 1: Processamento e Enfileiramento de Dados
+Desenvolver um sistema em .NET (C#) responsável por:<br>
+Leitura de Dados: Implementar a leitura de dados de uma base de dados MongoDB.<br>
+Tratamento de Dados: Realizar o tratamento e manipulação dos dados lidos, de acordo com as regras de negócio especificadas pelo candidato.<br>
+Envio para Fila: Enviar os dados tratados para uma fila de mensagens RabbitMQ.
+
+ 
+### Etapa 2: Consumo e Apresentação de Dados
+Desenvolver um sistema composto por duas partes:<br>
+Backend (Node.js): Responsável por consumir as mensagens da fila RabbitMQ e persistir as mensagens na base do MongoDB.<br>
+Frontend (Vue.js): Responsável por exibir as informações tratadas em uma interface web. O frontend deverá ser desenvolvido utilizando o framework Vue.js e implementado como um Web Component.
+
+### Tecnologias Envolvidas
+O desafio abrange as seguintes tecnologias:<br>
+Backend: C# (.NET) e Node.js<br>
+Frontend: ASP.NET e Vue.js (Web Components)<br>
+Banco de Dados: MongoDB<br>
+Mensageria: RabbitMQ
+
 ## Breve detalhes de execução
 <ul>
   <li>É necessário configurar o appsettings.Development.json (aplicação .net) e o .env(aplicação node)</li>
