@@ -4,7 +4,7 @@
         :data="chartData"
         :options="chartOptions"
         class="has-text-centered"
-        style="height: 50vh"
+        style="height: 57vh"
     />
 </template>
 
